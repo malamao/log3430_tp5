@@ -21,4 +21,6 @@ jobs:
         run: |
           python server.py &
           echo "Waiting for Flask server to start"
-          sleep 30
+      - name: Run Locust
+        run:
+          locust --headless -u 10000 --run-time 120 -r 100
