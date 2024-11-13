@@ -23,4 +23,4 @@ jobs:
           echo "Waiting for Flask server to start"
       - name: Run Locust
         run:
-          locust --headless -u 10000 --run-time 120 -r 100
+          locust --headless -u 10000 --run-time 120 -r 100 -H http://10.200.44.123:5000/
